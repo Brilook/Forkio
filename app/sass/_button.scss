@@ -1,0 +1,16 @@
+.button{
+    color: #fff;
+    border-radius: 25px; 
+    font-family: $text;
+
+    &_header{
+        display: flex;
+        align-items: center;
+        background-color: $maincol;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 0 25px;
+        height: 37px;
+
+    }
+}
