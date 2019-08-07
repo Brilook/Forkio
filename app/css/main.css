@@ -380,7 +380,9 @@ a {
     width: 25px;
     height: 25px;
     position: relative; }
-    .header-nav .menu-link span, .header-nav .menu-link span:before, .header-nav .menu-link span:after {
+    .header-nav .menu-link span,
+    .header-nav .menu-link span:before,
+    .header-nav .menu-link span:after {
       display: block;
       width: 22px;
       height: 2px;
@@ -410,34 +412,49 @@ a {
         margin-top: 0; }
 
 @media screen and (min-width: 401px) {
-  .header-nav {
-    background-color: #f38f0b; }
-    .header-nav_title {
-      display: inline-block;
-      font-size: 24px;
-      color: #8D81AC;
-      vertical-align: middle; } }
+  .header-nav_title {
+    display: inline-block;
+    font-size: 24px;
+    color: #8D81AC;
+    vertical-align: middle; } }
 
 @media screen and (min-width: 481px) {
   .header-nav {
-    background-color: #24f05e;
-    justify-content: space-between;
-    padding: 0 20px; }
+    justify-content: space-around;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    align-items: center; }
     .header-nav_items {
-      position: relative;
-      top: 29px;
-      left: 0;
-      display: inline-flex;
+      position: static;
+      display: flex;
       font-size: 16px;
-      color: #8D81AC;
       background-color: initial;
-      text-align: center;
-      width: 60%; }
-    .header-nav li {
-      border-bottom: none; }
-      .header-nav li a {
-        color: #fff; }
-      .header-nav li .active {
-        display: none; }
+      width: 100%;
+      line-height: initial;
+      order: 1;
+      justify-content: center; }
+      .header-nav_items li {
+        border-bottom: none;
+        padding: 0 13px; }
+        .header-nav_items li:nth-child(1) {
+          display: none; }
+        .header-nav_items li a {
+          color: #8D81AC;
+          padding: 0;
+          font-size: 1rem; }
+        .header-nav_items li .active {
+          display: inherit;
+          border: none; }
+    .header-nav_logo {
+      width: 50%;
+      line-height: 0; }
   .menu-link {
     display: none; } }
+
+@media screen and (min-width: 993px) {
+  .header-nav_items {
+    order: 0;
+    width: 55%; }
+  .header-nav_logo {
+    width: 25%;
+    line-height: 0; } }
