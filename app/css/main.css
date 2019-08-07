@@ -458,3 +458,6 @@ a {
   .header-nav_logo {
     width: 25%;
     line-height: 0; } }
+
+.forkapp {
+  background-image: url(../img/header-logo.png); }
