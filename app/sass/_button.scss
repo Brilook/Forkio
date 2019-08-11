@@ -2,15 +2,30 @@
     color: #fff;
     border-radius: 25px; 
     font-family: $text;
+    background-color: $maincol;
+    display: flex;
+    align-items: center;
+    &:hover{
+        background-color: #fff;
+        color: rgba(141, 129, 172, 255); 
+    }
 
     &_header{
-        display: flex;
-        align-items: center;
-        background-color: $maincol;
         font-weight: bold;
         font-size: 15px;
         padding: 0 25px;
         height: 37px;
 
+    }
+
+    &_forkapp{
+        max-width: 390px;
+        max-height: 62px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        padding: 15px;
+        margin-left: -101px;
+        margin-bottom: -22px;
     }
 }

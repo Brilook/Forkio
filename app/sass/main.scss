@@ -1,26 +1,91 @@
 @import 'reset';
-@import 'variables';
 @import 'base';
-@import 'button';
+@import 'variables';
+// @import 'variables-my';
+// @import 'button';
+
+.button {
+    color: #fff;
+    border-radius: 25px;
+    font-family: $text;
+    background-color: $maincol;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        background-color: #fff;
+        color: #848e97;
+    }
+
+    &_header {
+        font-weight: bold;
+        font-size: 15px;
+        padding: 0 25px;
+        height: 37px;
+
+    }
+
+    &_forkapp {
+        max-width: 390px;
+        max-height: 62px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        padding: 14px;
+        margin-left: -115px;
+        margin-bottom: -22px;
+        font-weight: bold;
 
 
-
+    }
+}
 
 // HEADER
+.header {
+    background-color: #27262a;
+    position: relative;
+
+
+
+}
+
 .header-nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #27262a;
-    position: relative;
     line-height: 103px;
+    min-height: 103px;
 
-    &_title {
-        display: none;
-        font-size: 24px;
-        color: $maincol;
-        text-transform: uppercase;
+    &-logo {
+        display: flex;
+        align-items: center;
 
+        &:hover &_img {
+            background-position: 0 -5px;
+        }
+
+        &:hover &_title {
+            color: #fff;
+        }
+
+
+        &_img {
+            background-image: url(../img/header-logo-sprite.png);
+            background-repeat: no-repeat;
+            width: 53px;
+            height: 41px;
+            background-position: 0 -56px;
+
+
+        }
+
+        &_title {
+            display: none;
+            font-size: 24px;
+            color: $maincol;
+            text-transform: uppercase;
+
+        }
     }
 
     &_items {
@@ -31,6 +96,7 @@
         width: 100%;
         top: 102px;
         left: 0;
+        z-index: 999;
 
         li {
             border-bottom: 1px solid #3b3b3b;
@@ -103,27 +169,35 @@
 }
 
 @media screen and (min-width:#{($mq-401)}) {
-    .header-nav {
-
-        &_title {
-            display: inline-block;
-            font-size: 24px;
-            color: #8D81AC;
-
-            vertical-align: middle;
+    .header-nav-logo_title {
+        display: inline;
+        font-size: 24px;
+        color: #8D81AC;
+        font-weight: bold;
 
 
-        }
+
     }
-
 }
+
+
 
 @media screen and (min-width:#{($mq-481)}) {
     .header-nav {
-        justify-content: space-around;
-        padding:  20px 0;
+        justify-content: space-between;
+        padding: 7px 0;
         flex-wrap: wrap;
         align-items: center;
+        line-height: 0;
+
+        &-logo_img {
+            margin: 0 17px 0 20px;
+        }
+
+        .button_header {
+            margin-right: 20px;
+        }
+
         &_items {
             position: static;
             display: flex;
@@ -133,22 +207,28 @@
             line-height: initial;
             order: 1;
             justify-content: center;
-            
-            
-            
+
+
+
+
+
             li {
                 border-bottom: none;
-                padding: 0 13px;
-                
-                
-                &:nth-child(1){
+                padding: 0 10px;
+
+
+                &:nth-child(1) {
                     display: none;
                 }
-                
+
                 a {
                     color: #8D81AC;
                     padding: 0;
-                    font-size: 1rem;
+                    font-weight: bold;
+
+                    &:hover {
+                        color: #fff;
+                    }
                 }
 
                 .active {
@@ -157,7 +237,8 @@
                 }
             }
         }
-        &_logo{
+
+        &_logo {
             width: 50%;
             line-height: 0;
         }
@@ -168,13 +249,15 @@
         display: none;
     }
 }
+
 @media screen and (min-width:#{($mq-993)}) {
-    .header-nav{
-        &_items{
+    .header-nav {
+        &_items {
             order: 0;
             width: 55%;
         }
-        &_logo{
+
+        &_logo {
             width: 25%;
             line-height: 0;
         }
@@ -184,7 +267,117 @@
 }
 
 // FORKAPP
-.forkapp{
-    background-image: url(../img/header-logo.png);
+.forkapp {
+    background-image: url(../img/forkapp-bgr.png);
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: 50% 40%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 40px 0 400px 0;
+    position: relative;
+
+    &_title {
+        color: #fff;
+        font-size: 35px;
+        font-weight: bold;
+
+    }
+
+    &_subtitle {
+        display: block;
+        font-size: 13px;
+        color: $maincol;
+        padding: 20px 45px;
+        line-height: 25px;
+
+    }
+
+    &_version {
+        color: #848e97;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:#{($mq-401)}) {
+    .forkapp {
+        &_title {
+            font-size: 40px;
+        }
+
+        &_subtitle {
+            font-size: 15px;
+        }
+
+        &_version {
+            font-size: 12px;
+        }
     
+
+    .button_forkapp {
+        // box-sizing: border-box;
+        padding: 23px 63px;
+        box-sizing: border-box;
+        margin-left: -159px;
+        margin-bottom: -31px;
+    }
+}
+}
+
+@media screen and (min-width:#{($mq-481)}) {
+    .forkapp {
+        &_title {
+            font-size: 52px;
+        }
+
+        &_subtitle {
+            font-size: 18px;
+        }
+
+    }
+
+}
+
+@media screen and (min-width:#{($mq-993)}) {
+    &_title {
+        font-size: 60px;
+    }
+
+    &_subtitle {
+        font-size: 22px;
+    }
+}
+// MAIN INFO
+.main-info{
+    background-color: #ffffff;
+    display: flex;
+    text-align: center; 
+    justify-content: center;
+
+
+    &_conditions{
+        font-size: 14px;
+        color:$subcol;
+        margin-top: 35px;
+
+    }
+    &_title{
+        font-size: 19px;
+        color: rgba(99, 92, 115, 255);
+        font-weight: bold;
+        margin-top: 72px;
+        text-transform: uppercase;
+        word-wrap: break-word;
+        padding: 0 40px 24px;
+        line-height: 1.8;
+        letter-spacing: 2px;
+    }
+    &_about{
+        font-size: 12px;
+        color: #323232;
+        font-family: "Lato", sans-serif;
+        line-height: 1.5;
+        padding: 0 25px;
+        word-spacing: 1px;
+    }
 }
