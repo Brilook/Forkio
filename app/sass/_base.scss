@@ -1,6 +1,8 @@
 body{
     font-family: $text;
     min-width: 220px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 a {
     text-decoration: none;

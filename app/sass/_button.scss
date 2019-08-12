@@ -1,16 +1,17 @@
-.button{
+.button {
     color: #fff;
-    border-radius: 25px; 
+    border-radius: 25px;
     font-family: $text;
     background-color: $maincol;
     display: flex;
     align-items: center;
-    &:hover{
+
+    &:hover {
         background-color: #fff;
-        color: rgba(141, 129, 172, 255); 
+        color: #848e97;
     }
 
-    &_header{
+    &_header {
         font-weight: bold;
         font-size: 15px;
         padding: 0 25px;
@@ -18,14 +19,17 @@
 
     }
 
-    &_forkapp{
+    &_forkapp {
         max-width: 390px;
         max-height: 62px;
         position: absolute;
         left: 50%;
         bottom: 0;
-        padding: 15px;
-        margin-left: -101px;
+        padding: 14px;
+        margin-left: -115px;
         margin-bottom: -22px;
+        font-weight: bold;
+
+
     }
 }
