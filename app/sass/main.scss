@@ -11,6 +11,7 @@
     background-color: $maincol;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &:hover {
         background-color: #fff;
@@ -357,6 +358,7 @@
     display: flex;
     text-align: center;
     justify-content: center;
+    transition: 0.3s;
 
 
     &_conditions {
@@ -554,6 +556,7 @@
             position: relative;
             top: 41px;
             left: 166px;
+            display: inline-block;
         }
 
         &-left {
@@ -573,7 +576,6 @@
 .social {
     margin-top: 60px;
 
-    // background-color: #aaa;
     &-wrap {
         display: flex;
         flex-direction: column;
@@ -740,7 +742,6 @@
     &-item {
         display: inline-flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
         margin-bottom: 30px;
 
@@ -819,9 +820,9 @@
     background-repeat: no-repeat;
     background-position: 51% -1%;
     background-color: #4b3b4e;
-    color: #fff;
     text-align: center;
     padding-bottom: 25px;
+    color: #fff;
 
     &-title {
         font-size: 27px;
@@ -831,7 +832,7 @@
     }
 
     &-item {
-        margin-bottom: 50px;
+        margin-bottom: 80px;
 
         &_img {
             margin-bottom: 15px;
@@ -917,20 +918,184 @@
         }
     }
 }
-@media screen and (min-width:#{($mq-993)}){
-    .testimonials{
-        &-title{
+
+@media screen and (min-width:#{($mq-993)}) {
+    .testimonials {
+        &-title {
             font-size: 35px;
         }
-        &-item{
+
+        &-item {
             width: 30%;
         }
+
         &-bottom {
             width: 60%;
             margin-top: 50px;
         }
+
         &-hr {
             width: 55%;
         }
+    }
+}
+
+
+// PRICING
+.pricing {
+    background-image: url(../img/prices.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #4b3b4e;
+    color: #fff;
+    text-align: center;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-rate {
+        background-color: rgba(255, 255, 255, 0.05);
+        width: 257px;
+        height: 457px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        &_title {
+            font-size: 17px;
+            text-transform: uppercase;
+            padding: 46px 65px 34px 65px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+
+        }
+
+        &_cost {
+            font-size: 57px;
+            margin: 32px auto 24px;
+        }
+
+        &_cost span {
+            font-weight: bold;
+
+        }
+
+
+        &_time {
+            font-size: 11px;
+            opacity: 0.3;
+            text-transform: uppercase;
+
+        }
+
+        &_hr {
+            color: $maincol;
+            background-color: $maincol;
+            margin: 40px auto 30px;
+            height: 5px;
+            width: 60px;
+            border: none;
+        }
+
+        &_quality {
+            font-size: 13px;
+            // padding: 0 60px;
+            line-height: 1.5;
+        }
+
+        &_btn {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: auto;
+            text-transform: uppercase;
+            color: #fff;
+            border-radius: 25px;
+            font-family: $text;
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            padding: 15px 38px;
+
+        }
+    }
+
+    .best {
+        width: 288px;
+        height: 560px;
+        background-color: rgba(0, 0, 0, 0.05);
+
+        &_title {
+            background-color: rgba(0, 0, 0, 0.1);
+
+        }
+
+        &_cost {
+            font-size: 78px;
+        }
+
+        &_doll {
+            font-weight: normal;
+        }
+
+        &_btn {
+            padding: 20px 50px;
+            font-size: 12px;
+            margin-bottom: 35px;    
+        }
+
+    }
+}
+
+@media screen and (min-width:#{($mq-401)}) {
+    .pricing {
+        .best {
+            width: 299px;
+        }
+    }
+}
+
+@media screen and (min-width:#{($mq-481)}) {
+    .pricing {
+        &-wrap {
+            flex-wrap: wrap;
+            flex-direction: initial;
+            justify-content: center;
+
+        }
+
+        &-rate {
+            margin-left: 40px;
+            // width: 40%;
+        }
+
+        .best {
+            margin-right: -20px;
+            margin-left: 20px;
+        }
+    }
+}
+
+@media screen and (min-width:#{($mq-993)}) {
+    .pricing {
+        &-rate {
+            margin-left: 15px;
+
+
+            &-wrap {
+                flex-wrap: nowrap;
+                justify-content: baseline;
+            }
+        }
+
+        .best {
+            width: 299px;
+            margin-right: 0;
+        }
+
+
+
+
     }
 }

@@ -12,7 +12,8 @@
 
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700&display=swap" rel="stylesheet">
     <script src="./js/jquery-3.4.1.min.js"></script>
 </head>
@@ -27,9 +28,9 @@
                 </a>
                 <ul class="header-nav_items">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#">About Fork</a></li>
-                    <li><a href="#">Buying Options</a></li>
+                    <li><a href="#Overview">Overview</a></li>
+                    <li><a href="#AboutFork">About Fork</a></li>
+                    <li><a href="#Options">Buying Options</a></li>
                     <li><a href="#">Support</a></li>
                 </ul>
                 <a href="#" class="button button_header">Buy Now</a>
@@ -50,7 +51,7 @@
         </div>
     </section>
     <!-- MAIN INFO -->
-    <section class="main-info">
+    <section class="main-info" id="Overview">
         <div class="container">
             <p class="main-info_conditions">Unlimited 30-Days Trial Period</p>
             <h3 class="main-info_title">Revolutionary editor</h3>
@@ -82,7 +83,7 @@
         </div>
     </section>
     <!-- FEATURES -->
-    <section class="features">
+    <section class="features ">
         <div class="container">
             <h4 class="features_title">&lt; Here is what you get &gt;</h4>
             <div class="features-left">
@@ -279,54 +280,115 @@
         </div>
     </section>
     <!-- TESTIMONIALS -->
-    <section class="testimonials">
+    <section class="testimonials" id="AboutFork">
         <div class="container">
             <h5 class="testimonials-title">People Are Talking About Fork</h5>
             <div class="testimonials-item-wrap">
-            <div class="testimonials-item">
-                <div class="testimonials-item_img">
-                <img src="./img/testimonials1.png" alt="smashing" >
-            </div>
-                <p class="testimonials-item_text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet.
-                    Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
-            </div>
-            <div class="testimonials-item">
-                <div class="testimonials-item_img">
-                <img src="./img/testimonials2.png" alt="smashing" >
+                <div class="testimonials-item">
+                    <div class="testimonials-item_img">
+                        <img src="./img/testimonials1.png" alt="smashing">
+                    </div>
+                    <p class="testimonials-item_text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit
+                        amet.
+                        Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
                 </div>
-                <p class="testimonials-item_text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
-            </div>
-            <div class="testimonials-item">
-                <div class="testimonials-item_img">
-                <img src="./img/testimonials3.png" alt="smashing" >
+                <div class="testimonials-item">
+                    <div class="testimonials-item_img">
+                        <img src="./img/testimonials2.png" alt="smashing">
+                    </div>
+                    <p class="testimonials-item_text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum,
+                        rhoncus molestie neque ac, mollis eleifend nibh.</p>
                 </div>
-                <p class="testimonials-item_text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula. </p>
-            </div>
-            <div class="testimonials-item">
-                <div class="testimonials-item_img">
-                <img src="./img/testimonials4.png" alt="smashing" >
+                <div class="testimonials-item">
+                    <div class="testimonials-item_img">
+                        <img src="./img/testimonials3.png" alt="smashing">
+                    </div>
+                    <p class="testimonials-item_text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit
+                        erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula. </p>
                 </div>
-                <p class="testimonials-item_text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
-            </div>
-            <div class="testimonials-item">
-                <div class="testimonials-item_img">
-                <img src="./img/testimonials5.png" alt="smashing" >
+                <div class="testimonials-item">
+                    <div class="testimonials-item_img">
+                        <img src="./img/testimonials4.png" alt="smashing">
+                    </div>
+                    <p class="testimonials-item_text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit
+                        amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
                 </div>
-                <p class="testimonials-item_text">Praesent ut eros tristique, malesuada lectus vel, lobortis massa. Nulla faucibus lorem id arcu consequat faucibus.  </p>
-            </div>
-            <div class="testimonials-item">
-                <div class="testimonials-item_img">
-                <img src="./img/testimonials6.png" alt="smashing" >
+                <div class="testimonials-item">
+                    <div class="testimonials-item_img">
+                        <img src="./img/testimonials5.png" alt="smashing">
+                    </div>
+                    <p class="testimonials-item_text">Praesent ut eros tristique, malesuada lectus vel, lobortis massa.
+                        Nulla faucibus lorem id arcu consequat faucibus. </p>
                 </div>
-                <p class="testimonials-item_text">Fusce pharetra erat id odio blandit, nec 
+                <div class="testimonials-item">
+                    <div class="testimonials-item_img">
+                        <img src="./img/testimonials6.png" alt="smashing">
+                    </div>
+                    <p class="testimonials-item_text">Fusce pharetra erat id odio blandit, nec
                         pharetra eros venenatis. Pellentesque porttitor cursus massa et vestibulum. </p>
+                </div>
+                <p class="testimonials-bottom">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris,
+                    facilisis vitae aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec
+                    elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. </p>
+                <hr class="testimonials-hr">
             </div>
-            <p class="testimonials-bottom">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-            <hr class="testimonials-hr">
-        </div>
         </div>
 
     </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="Options">
+        <div class="container">
+            <h5 class="testimonials-title">Fork Subscription
+                Pricing</h5>
+            <div class="pricing-wrap">
+
+                <div class="pricing-rate">
+                    <span class="pricing-rate_title">Students</span>
+                    <p class="pricing-rate_cost">$<span>29</span> </p>
+                    <p class="pricing-rate_time">per Month</p>
+                    <hr class="pricing-rate_hr ">
+                    <p class="pricing-rate_quality">Professional License</p>
+                    <a href="#" class="pricing-rate_btn">purchase</a>
+                </div>
+
+                <div class="pricing-rate">
+                    <span class="pricing-rate_title">professional</span>
+                    <p class="pricing-rate_cost">$<span>59</span></p>
+                    <p class="pricing-rate_time">per Month</p>
+                    <hr class="pricing-rate_hr ">
+                    <p class="pricing-rate_quality">Professional License <br>
+                        Email Support</p>
+                    <a href="#" class="pricing-rate_btn">purchase</a>
+
+                </div>
+         
+         
+                <div class="pricing-rate best">
+                    <span class="pricing-rate_title best_title">agency</span>
+                    <p class="pricing-rate_cost best_cost">$<span>99</span></p>
+                    <p class="pricing-rate_time">per Month</p>
+                    <hr class="pricing-rate_hr ">
+                    <p class="pricing-rate_quality">1-12 Team Members <br>
+                        Phone Support</p>
+                    <a href="#" class="pricing-rate_btn best_btn">purchase</a>
+
+                </div>
+           
+                <div class="pricing-rate">
+                    <span class="pricing-rate_title">enterprise</span>
+                    <p class="pricing-rate_cost">$<span>159</span></p>
+                    <p class="pricing-rate_time">per Month</p>
+                    <hr class="pricing-rate_hr ">
+                    <p class="pricing-rate_quality">Unlimited Team Members <br>
+                        24/ 7 Phone Support</p>
+                    <a href="#" class="pricing-rate_btn">purchase</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
