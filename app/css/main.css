@@ -336,6 +336,21 @@ a {
   margin: 0 auto;
   padding: 0 10px; }
 
+.scroll-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  transition: all .2s ease;
+  cursor: pointer; }
+
+.icone-up {
+  color: #8D81AC;
+  font-size: 50px; }
+
+.icone-up:hover {
+  color: #848e97; }
+
 .button {
   color: #fff;
   border-radius: 25px;
@@ -838,7 +853,7 @@ a {
 .testimonials {
   background-image: url(../img/testimonials-bgr.png);
   background-repeat: no-repeat;
-  background-position: 51% -1%;
+  background-position: 51% 45%;
   background-color: #4b3b4e;
   text-align: center;
   padding-bottom: 25px;
@@ -919,11 +934,13 @@ a {
   background-position: 0 0;
   background-color: #4b3b4e;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 70px; }
   .pricing-wrap {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
   .pricing-rate {
     background-color: rgba(255, 255, 255, 0.05);
     width: 257px;
@@ -967,6 +984,10 @@ a {
       align-items: center;
       font-size: 11px;
       padding: 15px 38px; }
+      .pricing-rate_btn:hover {
+        background-color: #cfc9cf;
+        color: #7f6d78;
+        font-weight: bold; }
   .pricing .best {
     width: 288px;
     height: 560px;
@@ -987,22 +1008,109 @@ a {
     width: 299px; } }
 
 @media screen and (min-width: 481px) {
-  .pricing-wrap {
+  .pricing .wparwrap {
+    display: flex;
     flex-wrap: wrap;
-    flex-direction: initial;
+    align-items: center;
     justify-content: center; }
-  .pricing-rate {
-    margin-left: 40px; }
-  .pricing .best {
-    margin-right: -20px;
-    margin-left: 20px; } }
+  .pricing-wrap {
+    flex: 0 0 50%;
+    max-width: 48%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 2px;
+    margin-right: 2px; } }
 
 @media screen and (min-width: 993px) {
-  .pricing-rate {
-    margin-left: 15px; }
-    .pricing-rate-wrap {
-      flex-wrap: nowrap;
-      justify-content: baseline; }
-  .pricing .best {
-    width: 299px;
-    margin-right: 0; } }
+  .pricing {
+    background-repeat: round; }
+    .pricing-wrap {
+      flex: 0 0 25%;
+      max-width: 24%; } }
+
+.subscribe {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 30px 0 40px; }
+  .subscribe-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 0 30px 25px;
+    color: #635c73; }
+  .subscribe-input {
+    border-radius: 25px;
+    border: none;
+    margin-top: 15px;
+    height: 42px;
+    width: 290px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    max-width: 335px; }
+    .subscribe-input::placeholder {
+      font-size: 14px;
+      color: #c8cbcf; }
+  .subscribe-btn {
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 15px 30px;
+    margin-top: 20px;
+    display: inline-block; }
+
+@media screen and (min-width: 401px) {
+  .subscribe-form {
+    flex: 0 0 70%;
+    max-width: 70%;
+    margin: 0 auto; }
+  .subscribe-title {
+    font-size: 28px; } }
+
+@media screen and (min-width: 481px) {
+  .subscribe-form {
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .subscribe-input {
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 2%; }
+  .subscribe-title {
+    font-size: 30px; } }
+
+@media screen and (min-width: 993px) {
+  .subscribe-wrap {
+    display: flex; }
+  .subscribe-form {
+    display: flex; }
+  .subscribe-input {
+    width: 155%;
+    margin-top: 0; }
+  .subscribe-btn {
+    margin-top: 0;
+    padding: 0 20px;
+    white-space: nowrap; }
+  .subscribe-title {
+    padding-bottom: 0; }
+  .form-wrap {
+    width: 70%; } }
+
+.footer {
+  padding: 40px 0 50px 0;
+  background-color: #fff; }
+  .footer-logo a {
+    background: linear-gradient(to left, #8D81AC 33%, #333 0%);
+    border: none;
+    /* line-height: 24px; */
+    display: inline-block;
+    border: none; }
+  .footer-logo_title {
+    color: #111;
+    background: #fff;
+    mix-blend-mode: lighten;
+    font-size: 24px; }
+  .footer-logo_text {
+    font-size: 14px;
+    color: #848e97;
+    text-align: left;
+    margin-top: 36px;
+    line-height: 1.5; }

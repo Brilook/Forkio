@@ -12,4 +12,40 @@ $(document).ready(function () {
     //     autoplaySpeed: 5000,
     // });
     $('.single-item').slick();
+    $(window).resize(function () {
+      
+        var widthWind = $(this).width();
+    
+        if (widthWind > 481) {
+           $('.subscribe-title').text("Order callbak");
+           $('.subscribe-btn').text("call me!");
+        }
+        else {
+            $('.subscribe-title').text("Subscribe To Stay In Touch");
+            $('.subscribe-btn').text("Subscribe");
+         }
+    });
+
+
+    // scroll-up
+    var lastScrollPosition = 0;
+
+    $('#scroll-up').click( function(){
+        if ( $(document).scrollTop() > "0") {
+            $('html, body').animate({scrollTop:0},1000);
+            lastScrollPosition = $(document).scrollTop();
+            }
+    });
+    $(document).scroll( function(){
+        if ($(document).scrollTop() > 0 ){
+            $('#scroll-up').fadeIn();
+        } else {
+            $('#scroll-up').fadeOut();
+
+        }
+    });
+
+
+
+    
 
